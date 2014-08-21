@@ -1,9 +1,11 @@
 package simulations.gui
 
-import javax.swing.{JComponent, JFrame, JLabel, Timer, SwingUtilities}
-import javax.swing.border.{EmptyBorder}
-import java.awt.{Graphics, Graphics2D, GridLayout, BorderLayout, Color, Dimension, Rectangle, Polygon}
-import java.awt.event.{ActionListener, ActionEvent}
+import java.awt.event.{ActionEvent, ActionListener}
+import java.awt.{BorderLayout, Color, Dimension, Graphics, Graphics2D, GridLayout, Polygon, Rectangle}
+import javax.swing.border.EmptyBorder
+import javax.swing.{JComponent, JFrame, JLabel, Timer}
+
+import simulations.EpidemySimulator
 
 object EpidemyDisplay extends EpidemySimulator with App {
 
@@ -58,7 +60,7 @@ object EpidemyDisplay extends EpidemySimulator with App {
     def doorWallSize = (roomSize - doorSize) / 2
   }
 
-  import GraphicConfig._
+  import simulations.gui.EpidemyDisplay.GraphicConfig._
 
   class Room (val worldRow: Int, val worldCol: Int) extends JComponent {
     val roomDimension = new Dimension(roomSize + 1, roomSize + 1)
