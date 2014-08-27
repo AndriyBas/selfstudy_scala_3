@@ -21,7 +21,6 @@ REPEAT {
   println(i)
   i = i - 1
 }(i <= 0)
-
 class R2OLOLO(command: => Unit) {
   def UNTIL(condition: => Boolean): Unit =
     if (condition) ()
