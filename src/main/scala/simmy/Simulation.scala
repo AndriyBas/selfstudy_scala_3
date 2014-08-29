@@ -1,5 +1,7 @@
 package simmy
 
+import scala.collection.immutable.Nil
+
 /**
  * Created by bamboo on 21.08.14.
  */
